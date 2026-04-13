@@ -1,4 +1,4 @@
 def call(){
-  dependencyCheck additionalArguments: '--scan ./ --format ALL --out .', odcInstallation: 'OWASP'
+  dependencyCheck additionalArguments: '--scan ./ --format XML --out . --noupdate', odcInstallation: 'OWASP'
   dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
 }
